@@ -58,6 +58,19 @@ module.exports = {
         A300: '#BE0000',
         A400: '#850000',
         A500: '#740000',
+      },
+      fontFamily: {
+        headings: ['JakartaSans', 'sans-serif'],
+        bodyText: ['Inter', 'sans-serif'],
+      },
+      fontSize: {
+        xs: ['0.75rem', { lineHeight: '1rem' }],
+        sm: ['0.875rem', { lineHeight: '1rem' }],
+        base: ['1rem', { lineHeight: '1.25rem' }],
+        lg: ['1.25rem', { lineHeight: '1.5rem' }],
+        xl: ['1.5rem', { lineHeight: '2rem' }],
+        '2xl': ['1.75rem', { lineHeight: '2rem' }],
+        '3xl': ['2rem'],
       }
     },
   },
