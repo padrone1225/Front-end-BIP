@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "./components/icons/Icon";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <Icon name="Badge" color="B300" />
       </header>
     </div>
   );

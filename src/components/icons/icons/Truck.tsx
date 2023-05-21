@@ -1,4 +1,4 @@
-export default function Truck() {
+export default function Truck(color: string) {
   return (
     <svg
       width="22"
