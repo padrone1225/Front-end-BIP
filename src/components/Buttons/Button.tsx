@@ -19,7 +19,7 @@ interface ButtonProperties {
 }
 
 const Button = ({
-  size = "sm",
+  size = "lg",
   variant = "primary",
   className,
   iconLeft,
@@ -30,8 +30,9 @@ const Button = ({
   const [color, setColor] = useState<string>("white");
   const [disabled, setDisabled] = useState<string>("");
 
-  const commonClasses =
-    "rounded-full px-24 py-12 inline-flex items-center justify-center gap-8 border-1.5";
+  const commonClasses = `rounded-full inline-flex items-center justify-center gap-8 border-1.5 ${
+    size === "lg" ? "px-24 py-12" : "px-16 py-8"
+  }`;
   const primaryClasses = ` bg-gradient-to-b from-100% to-0% text-white ${
     disable
       ? "from-P300 to-white border-P300"
@@ -40,8 +41,9 @@ const Button = ({
   const secondaryClasses = disable
     ? " border-N500 text-N500"
     : " border-N500 hover:border-P300 text-N500 hover:text-P300";
-
   const mainClass = variant === "primary" ? primaryClasses : secondaryClasses;
+
+  const iconSize = size === "sm" ? "xs" : "sm";
 
   useEffect(() => {
     if (disable) {
@@ -63,8 +65,6 @@ const Button = ({
     }
   };
 
-  useEffect(() => console.log(color), [color]);
-
   const leaveEvent = () => {
     if (!disable) {
       if (variant !== "primary") {
@@ -80,13 +80,23 @@ const Button = ({
       onMouseLeave={leaveEvent}
     >
       {iconLeft && (
-        <Icon name={iconLeft} viewBox="0 0 14 8" size="sm" color={color} />
+        <Icon
+          name={iconLeft}
+          viewBox="0 0 14 8"
+          size={iconSize}
+          color={color}
+        />
       )}
       <h1 className="font-bold font-headings text-sm tracking-[0.02rem]">
         Button
       </h1>
       {iconRight && (
-        <Icon name={iconRight} viewBox="0 0 14 8" size="sm" color={color} />
+        <Icon
+          name={iconRight}
+          viewBox="0 0 14 8"
+          size={iconSize}
+          color={color}
+        />
       )}
     </button>
   );
