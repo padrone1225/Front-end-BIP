@@ -1,5 +1,5 @@
 import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../../tailwind.config";
+import * as tailwindConfig from "@tailwindConfig";
 import { IconNames, Icons } from "./icons";
 
 export type IconProperties = {

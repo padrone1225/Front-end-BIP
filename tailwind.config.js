@@ -1,14 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-import withMT from '@material-tailwind/react/utils/withMT'
 
-export default withMT({
-  // mode: 'jit',
-  content: ["./src/**/*.{js, jsx, ts, tsx"],
+module.exports = {
+  mode: 'jit',
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
         // Neutrals
-        white: '#fffff',
         N50: '#F3F3F3',
         N75: '#999DA2',
         N100: '#6E747C',
@@ -18,13 +16,13 @@ export default withMT({
         N500: '#030912',
 
         // Primary
-        B50: '#EBF0FB',
-        B75: '#AEC1ED',
-        B100: '#8CA7E6',
-        B200: '#5B82DB',
-        B300: '#3968D4',
-        B400: '#284994',
-        B500: '#233F81',
+        P50: '#EBF0FB',
+        P75: '#AEC1ED',
+        P100: '#8CA7E6',
+        P200: '#5B82DB',
+        P300: '#3968D4',
+        P400: '#284994',
+        P500: '#233F81',
 
         // Secondary
         SC50: '#FDF2EE',
@@ -75,6 +73,9 @@ export default withMT({
         '2xl': ['1.75rem', { lineHeight: '2rem' }],
         '3xl': ['2rem'],
       },
+      borderWidth: {
+        1.5: '1.5px'
+      },
       spacing: {
         4: '0.25rem',
         8: '0.5rem',
@@ -101,5 +102,4 @@ export default withMT({
     },
   },
   plugins: [],
-})
-
+}

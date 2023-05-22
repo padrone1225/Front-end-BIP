@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+import "@types/jest";
 import App from "../App";
 
 const testIds = {};
