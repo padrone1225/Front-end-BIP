@@ -4,6 +4,15 @@ module.exports = {
   mode: 'jit',
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      xs: '360px',
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1280px',
+      '2xl': '1536px',
+      '3xl': '1920px'
+    },
     extend: {
       colors: {
         // Neutrals
@@ -83,6 +92,8 @@ module.exports = {
         16: '1rem',
         20: '1.25rem',
         24: '1.5rem',
+        25: '1.5625rem',
+        26: '1.625rem',
         28: '1.75rem',
         32: '2rem',
         36: '2.25rem',

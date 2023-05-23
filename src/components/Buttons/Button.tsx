@@ -14,7 +14,10 @@ interface ButtonProperties {
   className?: string;
   iconLeft?: IconNames;
   iconRight?: IconNames;
+  iconSize?: "sm" | "lg" | "2xs" | "xs" | "md" | "xl";
+  viewBox?: string;
   disable?: boolean;
+  title?: string;
   onClick?: () => void;
 }
 
@@ -24,7 +27,10 @@ const Button = ({
   className,
   iconLeft,
   iconRight,
-  disable = true,
+  iconSize = "sm",
+  viewBox,
+  disable,
+  title,
   onClick,
 }: ButtonProperties) => {
   const [color, setColor] = useState<string>("white");
@@ -42,8 +48,6 @@ const Button = ({
     ? " border-N500 text-N500"
     : " border-N500 hover:border-P300 text-N500 hover:text-P300";
   const mainClass = variant === "primary" ? primaryClasses : secondaryClasses;
-
-  const iconSize = size === "sm" ? "xs" : "sm";
 
   useEffect(() => {
     if (disable) {
@@ -68,7 +72,7 @@ const Button = ({
   const leaveEvent = () => {
     if (!disable) {
       if (variant !== "primary") {
-        setColor("P300");
+        setColor("N500");
       }
     }
   };
@@ -80,20 +84,15 @@ const Button = ({
       onMouseLeave={leaveEvent}
     >
       {iconLeft && (
-        <Icon
-          name={iconLeft}
-          viewBox="0 0 14 8"
-          size={iconSize}
-          color={color}
-        />
+        <Icon name={iconLeft} viewBox={viewBox} size={iconSize} color={color} />
       )}
       <h1 className="font-bold font-headings text-sm tracking-[0.02rem]">
-        Button
+        {title}
       </h1>
       {iconRight && (
         <Icon
           name={iconRight}
-          viewBox="0 0 14 8"
+          viewBox={viewBox}
           size={iconSize}
           color={color}
         />
