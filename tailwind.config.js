@@ -16,7 +16,7 @@ module.exports = {
     extend: {
       colors: {
         // Neutrals
-        N50: '#F3F3F3',
+        N50: '#E9E9E9',
         N75: '#999DA2',
         N100: '#6E747C',
         N200: '#303843',
@@ -87,6 +87,7 @@ module.exports = {
       },
       spacing: {
         4: '0.25rem',
+        7: '0.4375rem',
         8: '0.5rem',
         12: '0.75rem',
         16: '1rem',
