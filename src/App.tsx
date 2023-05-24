@@ -4,28 +4,12 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Icon from "./components/icons/Icon";
 import "./index.css";
+import Landing from "./Landing/Landing";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          data-testid="app-link"
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Icon name="Badge" color="B300" />
-        <Button iconLeft="Bottom" iconRight="Bottom" />
-      </header>
-      <Footer />
+      <Landing />
     </div>
   );
 }
