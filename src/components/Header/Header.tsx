@@ -1,15 +1,16 @@
 import Button from "../Buttons/Button";
+import IconButton from "../Buttons/IconButton";
 import Icon from "../icons/Icon";
 
 const Header = () => {
   return (
     <header>
-      <div className="flex justify-between items-center px-24">
-        <div className="flex items-center py-25 gap-60">
+      <div className="flex justify-between items-center px-24 md:px-20">
+        <div className="flex items-center py-25 gap-60 md:gap-24">
           <img src="logo.svg" alt="logo" className="h-40" />
           <Icon name="Search" />
         </div>
-        <div className="flex gap-24 items-center">
+        <div className="flex gap-24 items-center md:hidden">
           <Button
             size="lg"
             iconSize="sm"
@@ -24,7 +25,7 @@ const Header = () => {
           <h1>Deal Status</h1>
           <h1>Chat</h1>
         </div>
-        <div>
+        <div className="flex items-center gap-16">
           <Button
             size="lg"
             iconLeft="Plus"
@@ -33,6 +34,9 @@ const Header = () => {
             disable={false}
             title="List"
           />
+          <IconButton size="md" name="NotificationOn" className=" xs:hidden" />
+          <IconButton size="md" name="User" className=" xs:hidden" />
+          <IconButton size="md" name="Hamburger" className=" hidden md:block" />
         </div>
       </div>
     </header>
