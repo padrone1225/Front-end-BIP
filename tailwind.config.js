@@ -5,13 +5,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      xs: '360px',
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1280px',
-      '2xl': '1536px',
-      '3xl': '1920px'
+      xs: { 'max': '360px' },
+      sm: { 'max': '480px' },
+      md: { 'max': '768px' },
+      lg: { 'max': '976px' },
+      xl: { 'max': '1280px' },
+      '2xl': { 'max': '1536px' },
+      '3xl': { 'max': '1920px' }
     },
     extend: {
       colors: {

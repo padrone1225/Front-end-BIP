@@ -1,12 +1,19 @@
 import classNames from "classnames";
 import { useState } from "react";
 import Icon from "../icons/Icon";
+import { IconNames } from "../icons/icons";
 
 interface IconButtonProperties {
   size: "sm" | "md" | "lg";
+  name: IconNames;
+  className?: string;
 }
 
-const IconButton = ({ size }: IconButtonProperties) => {
+const IconButton = ({
+  size,
+  name = "NotificationOn",
+  className,
+}: IconButtonProperties) => {
   const [color, setColor] = useState<string>("N500");
   const commonClasses =
     "rounded-full flex items-center justify-center hover:bg-P50";
@@ -28,16 +35,11 @@ const IconButton = ({ size }: IconButtonProperties) => {
   };
   return (
     <button
-      className={classNames(commonClasses + styleClasses)}
+      className={classNames(commonClasses + styleClasses + className)}
       onMouseEnter={hoverEvent}
       onMouseLeave={leaveEvent}
     >
-      <Icon
-        name="NotificationOn"
-        size={iconSize}
-        viewBox={viewBox}
-        color={color}
-      />
+      <Icon name={name} size={iconSize} viewBox={viewBox} color={color} />
     </button>
   );
 };
