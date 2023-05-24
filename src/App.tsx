@@ -1,5 +1,6 @@
 import Button from "./components/Buttons/Button";
 import IconButton from "./components/Buttons/IconButton";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Icon from "./components/icons/Icon";
 import "./index.css";
@@ -23,8 +24,8 @@ function App() {
         </a>
         <Icon name="Badge" color="B300" />
         <Button iconLeft="Bottom" iconRight="Bottom" />
-        <IconButton size="lg" />
       </header>
+      <Footer />
     </div>
   );
 }
