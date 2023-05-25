@@ -162,7 +162,10 @@ function Landing() {
           </div>
         </div>
       </div>
-      <div id="work" className="relative bg-slate-500 h-[100rem] mt-42">
+      <div
+        id="work"
+        className="relative bg-slate-500 h-[200rem] mt-42 overflow-hidden"
+      >
         <div id="background" className="absolute z-1 w-full">
           <div id="cloud" className="relative">
             <img
@@ -198,13 +201,53 @@ function Landing() {
             <img
               src="images/landing/Cloud.png"
               alt="cloud"
-              className="top-1038 right-65 absolute scale-140"
+              className="top-1038 right-66 absolute scale-140"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-1382 left-155 absolute scale-90"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-1710 left-24 absolute scale-205"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-1892 right-200 absolute scale-90"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-1934 right-353 absolute scale-205"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-2154 left-130 absolute scale-115"
             />
           </div>
           <div className="[border-start-start-radius:6rem_6rem] border-t-1.5 border-l-1.5 border-O02 h-266 w-272 absolute top-388 left-376" />
-          <div className="h-266 w-272 absolute top-900 right-372 border-t-1.5 border-l-1.5 [border-start-start-radius:6rem_6rem] [direction:rtl]"></div>
+          <div className="[border-start-start-radius:6rem_6rem] [direction:rtl] h-266 w-272 absolute top-900 right-372 border-t-1.5 border-r-1.5" />
+          <div className="[border-start-start-radius:6rem_6rem] border-t-1.5 border-l-1.5 border-O02 h-266 w-272 absolute top-1402 left-372" />
         </div>
-        <h1 className="[-webkit-text-stroke:2px_#ffffff]">AAAAA</h1>
+        <div id="main">
+          <h1 className="text-N500 text-3xl text-center font-bold font-headings tracking-[0.02rem]">
+            How it works?
+          </h1>
+          <div className="grid grid-cols-2 gap-16 pt-96">
+            <div className="pt-36 pl-104 flex gap-16">
+              <h1 className="[-webkit-text-stroke:1.5px_#AEC1ED] text-extra text-transparent font-bold font-bodyText tracking-[0.02rem]">
+                1
+              </h1>
+            </div>
+          </div>
+        </div>
+        <h1 className="[-webkit-text-stroke:2px_#ffffff] text-center">
+          How it works?
+        </h1>
       </div>
     </div>
   );
