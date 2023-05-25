@@ -2,7 +2,7 @@ import Button from "../components/Buttons/Button";
 
 function Landing() {
   return (
-    <div className="mx-24 bg-slate-500 h-screen relative">
+    <div className="mx-24 bg-slate-500 h-[1200rem] relative">
       <div id="background" className="z-1 absolute -top-169 w-full">
         <div className="w-1216 h-253 bg-radial-gradiant m-auto"></div>
         <div id="cloud" className="relative mt-16">
@@ -49,11 +49,19 @@ function Landing() {
         </div>
         <div className="rounded-full h-872 w-872 bg-linear-gradiant mt-282 p-1.5 mx-auto relative">
           <div className="rounded-full w-full h-full bg-slate-500 p-148">
-            <div className="rounded-full bg-linear-gradiant h-full w-full p-1.5">
+            <div className="rounded-full bg-linear-gradiant h-full w-full p-1.5 relative">
               <div className="rounded-full w-full h-full bg-slate-500 p-148"></div>
+              <div className="rounded-full absolute top-8 left-167 h-28 w-28 bg-white p-4 shadow-drop-45">
+                <div className="rounded-full h-full w-full bg-[#CBECFF]"></div>
+              </div>
             </div>
           </div>
           <div className="rounded-full bg-white h-80 w-80 absolute left-89 top-89 shadow-drop-30"></div>
+          <img
+            src="images/landing/nextbite.png"
+            alt="next"
+            className="absolute top-122 left-94"
+          />
           <div className="rounded-full absolute top-78 right-152 h-28 w-28 bg-white p-4 shadow-drop-45">
             <div className="rounded-full h-full w-full bg-[#CBECFF]"></div>
           </div>
@@ -63,6 +71,21 @@ function Landing() {
           <div className="rounded-full absolute top-218 -right-11 h-104 w-104 bg-white p-12 shadow-drop-30">
             <img src="images/landing/Jazwares.png" alt="Jaz" />
           </div>
+          <div className="rounded-full absolute top-448 -left-37 w-82 h-82 shadow-drop-30 bg-white"></div>
+          <img
+            src="images/landing/TextEffect.png"
+            alt="text"
+            className="absolute top-456 -left-56"
+          />
+          <div className="rounded-full absolute top-448 -right-14 h-28 w-28 bg-white p-4 shadow-drop-45">
+            <div className="rounded-full h-full w-full bg-[#CBECFF]"></div>
+          </div>
+          <div className="rounded-full absolute top-584 right-10 w-82 h-82 shadow-drop-30 bg-white"></div>
+          <img
+            src="images/landing/Sonic.png"
+            alt="text"
+            className="absolute top-595 right-5"
+          />
         </div>
       </div>
       <div className="flex justify-between items-center z-10 py-24">
