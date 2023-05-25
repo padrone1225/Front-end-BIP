@@ -110,6 +110,15 @@ module.exports = {
         80: '5rem',
         84: '5.25rem',
         88: '5.5rem',
+        169: '10.5625rem',
+        253: '15.8125rem',
+        1216: '76rem'
+      },
+      backgroundImage: {
+        'radial-gradiant': 'radial-gradient(50% 50% at 50% 50%, #C5EAFF 0%, rgba(255, 255, 255, 0) 90.62%)'
+      },
+      zIndex: {
+        1: '1'
       }
     },
   },
