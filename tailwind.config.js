@@ -70,7 +70,8 @@ module.exports = {
         A500: '#740000',
 
         //Other
-        O01: '#365072'
+        O01: '#365072',
+        O02: '#DCF3FF'
       },
       fontFamily: {
         headings: ['JakartaSans', 'sans-serif'],
@@ -109,6 +110,7 @@ module.exports = {
         36: '2.25rem',
         37: '2.3125rem',
         40: '2.5rem',
+        42: '2.625rem',
         48: '3rem',
         52: '3.25rem',
         56: '3.5rem',
@@ -116,8 +118,10 @@ module.exports = {
         60: '3.75rem',
         64: '4rem',
         66: '4.125rem',
+        67: '4.1875rem',
         68: '4.25rem',
         72: '4.5rem',
+        75: '4.6875rem',
         76: '4.75rem',
         78: '4.875rem',
         80: '5rem',
@@ -132,6 +136,7 @@ module.exports = {
         143: '8.9375rem',
         148: '9.25rem',
         152: '9.5rem',
+        155: '9.6875rem',
         160: '10rem',
         167: '10.4375rem',
         169: '10.5625rem',
@@ -142,14 +147,21 @@ module.exports = {
         253: '15.8125rem',
         262: '16.375rem',
         266: '16.625rem',
+        272: '17rem',
         282: '17.625rem',
         286: '17.875rem',
+        376: '23.5rem',
+        388: '24.25rem',
+        402: '25.125rem',
         436: '27.25rem',
         448: '28rem',
         449: '28.0625rem',
         456: '28.5rem',
+        488: '30.5rem',
+        538: '33.625rem',
         584: '36.5rem',
         595: '37.1875rem',
+        640: '40rem',
         660: '41.25rem',
         872: '54.5rem',
         1216: '76rem'
@@ -164,14 +176,20 @@ module.exports = {
       scale: {
         82: '0.82',
         130: '1.3',
+        163: '1.63',
         177: '1.77',
         197: '1.97',
       },
       boxShadow: {
         'drop-30': '0 4px 24px rgba(192,195,210,0.3)',
         'drop-45': '0 4px 24px rgba(192,195,210,0.45)'
-      }
+      },
     },
   },
-  plugins: [],
+  variants: { // all the following default to ['responsive']
+    textFillColor: ['responsive'],
+    textStrokeColor: ['responsive'],
+    textStrokeWidth: ['responsive'],
+    paintOrder: ['responsive'],
+  },
 }

@@ -1,6 +1,11 @@
 import Button from "../components/Buttons/Button";
 
+import resolveConfig from "tailwindcss/resolveConfig";
+import * as tailwindConfig from "@tailwindConfig";
+
 function Landing() {
+  const fullConfig = resolveConfig(tailwindConfig);
+  console.log("config---->>", fullConfig);
   return (
     <div className="mx-24 h-[1200rem]">
       <div id="hero" className="relative">
@@ -41,6 +46,11 @@ function Landing() {
               src="images/landing/Cloud.png"
               alt="cloud"
               className="absolute scale-82 top-266 left-184"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="absolute top-262 right-160"
             />
             <img
               src="images/landing/Cloud.png"
@@ -151,6 +161,50 @@ function Landing() {
             </div>
           </div>
         </div>
+      </div>
+      <div id="work" className="relative bg-slate-500 h-[100rem] mt-42">
+        <div id="background" className="absolute z-1 w-full">
+          <div id="cloud" className="relative">
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-66 right-24 absolute scale-163"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-402 -left-67 absolute scale-197"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-538 left-155 absolute scale-90"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-402 -right-75 absolute scale-197"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-488 left-584 absolute"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-878 right-144 absolute scale-197"
+            />
+            <img
+              src="images/landing/Cloud.png"
+              alt="cloud"
+              className="top-1038 right-65 absolute scale-140"
+            />
+          </div>
+          <div className="[border-start-start-radius:6rem_6rem] border-t-1.5 border-l-1.5 border-O02 h-266 w-272 absolute top-388 left-376" />
+          <div className="h-266 w-272 absolute top-900 right-372 border-t-1.5 border-l-1.5 [border-start-start-radius:6rem_6rem] [direction:rtl]"></div>
+        </div>
+        <h1 className="[-webkit-text-stroke:2px_#ffffff]">AAAAA</h1>
       </div>
     </div>
   );
