@@ -68,6 +68,9 @@ module.exports = {
         A300: '#BE0000',
         A400: '#850000',
         A500: '#740000',
+
+        //Other
+        O01: '#365072'
       },
       fontFamily: {
         headings: ['JakartaSans', 'sans-serif'],
@@ -81,6 +84,7 @@ module.exports = {
         xl: ['1.5rem', { lineHeight: '2rem' }],
         '2xl': ['1.75rem', { lineHeight: '2rem' }],
         '3xl': ['2rem'],
+        '4xl': ['4.25rem', { lineHeight: '4.75rem' }]
       },
       borderWidth: {
         1.5: '1.5px'
@@ -108,6 +112,7 @@ module.exports = {
         48: '3rem',
         52: '3.25rem',
         56: '3.5rem',
+        58: '3.625rem',
         60: '3.75rem',
         64: '4rem',
         66: '4.125rem',
@@ -145,12 +150,13 @@ module.exports = {
         456: '28.5rem',
         584: '36.5rem',
         595: '37.1875rem',
+        660: '41.25rem',
         872: '54.5rem',
         1216: '76rem'
       },
       backgroundImage: {
         'radial-gradiant': 'radial-gradient(50% 50% at 50% 50%, #C5EAFF 0%, rgba(255, 255, 255, 0) 90.62%)',
-        'linear-gradiant': 'linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(233,247,254,1) 35%, rgba(220,243,255,1) 50%, rgba(233,247,254,1) 65%, rgba(255,255,255,1) 100%)'
+        'linear-gradiant': 'linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(233,247,254,1) 35%, rgba(220,243,255,1) 50%, rgba(233,247,254,1) 65%, rgba(255,255,255,1) 100%)',
       },
       zIndex: {
         1: '1'
