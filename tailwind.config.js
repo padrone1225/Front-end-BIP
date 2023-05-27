@@ -43,13 +43,13 @@ module.exports = {
         SC500: "#8C4D31",
 
         // Accent
-        A50: "#EFFAFA",
-        A75: "#D9FBF7",
-        A100: "#A3DFE0",
-        A200: "#7CD1D2",
-        A300: "#61C8C9",
-        A400: "#448C8D",
-        A500: "#3B7A7B",
+        AC50: "#EFFAFA",
+        AC75: "#D9FBF7",
+        AC100: "#A3DFE0",
+        AC200: "#7CD1D2",
+        AC300: "#61C8C9",
+        AC400: "#448C8D",
+        AC500: "#3B7A7B",
 
         // Success
         S50: "#E6F8E7",
@@ -90,6 +90,7 @@ module.exports = {
         "3xl": ["2rem"],
         "4xl": ["2.5rem", { lineHeight: "3.5rem" }],
         "5xl": ["4.25rem", { lineHeight: "4.75rem" }],
+        logo: ["3.75rem", { lineHeight: "2.5rem" }],
         extra: ["8.75rem", { lineHeight: "1rem", letterSpacing: "0.02rem" }],
       },
       letterSpacing: {
@@ -120,6 +121,7 @@ module.exports = {
         37: "2.3125rem",
         40: "2.5rem",
         42: "2.625rem",
+        46: "2.875rem",
         48: "3rem",
         52: "3.25rem",
         56: "3.5rem",
@@ -209,6 +211,8 @@ module.exports = {
       backgroundImage: {
         "radial-gradiant":
           "radial-gradient(50% 50% at 50% 50%, #C5EAFF 0%, rgba(255, 255, 255, 0) 90.62%)",
+        "footer-gradiant":
+          "radial-gradient(50% 50% at 50% 50%, #041B52 0%, #050F1D 90.62%)",
         "linear-gradiant":
           "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(233,247,254,1) 35%, rgba(220,243,255,1) 50%, rgba(233,247,254,1) 65%, rgba(255,255,255,1) 100%)",
       },

@@ -79,7 +79,7 @@ const Button = ({
 
   return (
     <button
-      className={classNames(commonClasses + mainClass + disabled)}
+      className={classNames(commonClasses + mainClass + disabled + className)}
       onMouseEnter={hoverEvent}
       onMouseLeave={leaveEvent}
     >
