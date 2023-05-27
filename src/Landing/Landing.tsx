@@ -5,7 +5,6 @@ import * as tailwindConfig from "@tailwindConfig";
 
 function Landing() {
   const fullConfig = resolveConfig(tailwindConfig);
-  console.log("config---->>", fullConfig);
   return (
     <div className="mx-24 h-[1200rem]">
       <div id="hero" className="relative">
@@ -111,10 +110,10 @@ function Landing() {
             <p className="font-bold font-bodyText text-P300 text-sm uppercase">
               we are bip
             </p>
-            <h1 className="text-N500 text-4xl text-center font-headings font-extrabold pt-16 w-660">
+            <h1 className="text-N500 text-5xl text-center font-headings font-extrabold pt-16 w-660">
               The all-in-one licensing solution
             </h1>
-            <h1 className="text-O01 text-base font-bodyText tracking-[0.02rem] pt-32">
+            <h1 className="text-O01 text-md font-bodyText tracking-md pt-32">
               An online marketplace that connects brands to licensees around the
               world.
             </h1>
@@ -162,10 +161,7 @@ function Landing() {
           </div>
         </div>
       </div>
-      <div
-        id="work"
-        className="relative bg-slate-500 h-[200rem] mt-42 overflow-hidden"
-      >
+      <div id="work" className="relative mt-42 overflow-hidde z-10">
         <div id="background" className="absolute z-1 w-full">
           <div id="cloud" className="relative">
             <img
@@ -213,37 +209,111 @@ function Landing() {
               alt="cloud"
               className="top-1710 left-24 absolute scale-205"
             />
-            <img
-              src="images/landing/Cloud.png"
-              alt="cloud"
-              className="top-1892 right-200 absolute scale-90"
-            />
-            <img
-              src="images/landing/Cloud.png"
-              alt="cloud"
-              className="top-1934 right-353 absolute scale-205"
-            />
-            <img
-              src="images/landing/Cloud.png"
-              alt="cloud"
-              className="top-2154 left-130 absolute scale-115"
-            />
           </div>
-          <div className="[border-start-start-radius:6rem_6rem] border-t-1.5 border-l-1.5 border-O02 h-266 w-272 absolute top-388 left-376" />
-          <div className="[border-start-start-radius:6rem_6rem] [direction:rtl] h-266 w-272 absolute top-900 right-372 border-t-1.5 border-r-1.5" />
-          <div className="[border-start-start-radius:6rem_6rem] border-t-1.5 border-l-1.5 border-O02 h-266 w-272 absolute top-1402 left-372" />
+          <div className="[border-start-start-radius:6rem_6rem] border-t-1.5 border-l-1.5 border-O02 h-282 w-282 absolute top-388 left-376" />
+          <div className="[border-start-start-radius:6rem_6rem] [direction:rtl] h-266 w-276 absolute top-900 right-372 border-t-1.5 border-r-1.5" />
         </div>
-        <div id="main">
-          <h1 className="text-N500 text-3xl text-center font-bold font-headings tracking-[0.02rem]">
+        <div id="main" className="z-50 relative">
+          <h1 className="text-N200 text-3xl text-center font-bold font-headings tracking-md">
             How it works?
           </h1>
           <div className="grid grid-cols-2 gap-16 pt-96">
-            <div className="pt-36 pl-104 flex gap-16">
-              <h1 className="[-webkit-text-stroke:1.5px_#AEC1ED] text-extra text-transparent font-bold font-bodyText tracking-[0.02rem]">
-                1
-              </h1>
+            <div className="pt-36 pl-104 flex items-start justify-center">
+              <div className="flex items-center gap-16">
+                <h1 className="[-webkit-text-stroke:1.5px_#AEC1ED] text-extra text-transparent font-bold font-headings">
+                  1
+                </h1>
+                <div className="flex flex-col gap-20">
+                  <h2 className="text-N200 text-xl font-bold font-headings">
+                    Sign Up
+                  </h2>
+                  <p className="text-md text-N100 font-botyText tracking-md">
+                    Create an account on our platform as a licensee, licensor,
+                    or agency to access our marketplace and services.
+                  </p>
+                </div>
+              </div>
             </div>
+            <div className="w-504 h-408 rounded-16 px-60 shadow-base-24 relative bg-white">
+              <div className="flex items-center justify-between pt-48">
+                <img src="logo.svg" alt="logo" className="h-36" />
+                <h3 className="text-N200 text-lg font-bold font-headings">
+                  Create an Account
+                </h3>
+              </div>
+              <div className="flex flex-col gap-20 pt-64">
+                <div className="w-384 h-48 rounded-12 bg-O03 py-22 pl-16 pr-152">
+                  <div className="w-full bg-N75 rounded-16 h-4" />
+                </div>
+                <div className="w-384 h-48 rounded-12 bg-O03 py-22 pl-16 pr-240">
+                  <div className="w-full bg-N75 rounded-16 h-4" />
+                </div>
+                <div className="w-384 h-48 rounded-12 bg-O03 py-22 pl-16 pr-276 flex gap-4">
+                  <div className="bg-N75 rounded-16 h-8 w-8" />
+                  <div className="bg-N75 rounded-16 h-8 w-8" />
+                  <div className="bg-N75 rounded-16 h-8 w-8" />
+                  <div className="bg-N75 rounded-16 h-8 w-8" />
+                  <div className="bg-N75 rounded-16 h-8 w-8" />
+                  <div className="bg-N75 rounded-16 h-8 w-8" />
+                  <div className="bg-N75 rounded-16 h-8 w-8" />
+                  <div className="bg-N75 rounded-16 h-8 w-8" />
+                </div>
+              </div>
+              <div className="w-232 h-128 bottom-32 -right-32 rounded-16 shadow-base-30 bg-white absolute flex items-center justify-center">
+                <Button size="lg" title="Get Started" />
+              </div>
+            </div>
+            <div className="w-504 h-408 rounded-16 shadow-base-24 bg-white mt-104 justify-self-end" />
+            <div className="pt-122 pr-104 flex items-start justify-center">
+              <div className="flex items-center gap-16">
+                <h1 className="[-webkit-text-stroke:1.5px_#AEC1ED] text-extra text-transparent font-bold font-headings">
+                  2
+                </h1>
+                <div className="flex flex-col gap-20">
+                  <h2 className="text-N200 text-xl font-bold font-headings">
+                    Find a match
+                  </h2>
+                  <p className="text-md text-N100 font-botyText tracking-md">
+                    List your brand or browse our marketplace to find the
+                    perfect licensing match for your company needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="pt-128 pl-104 flex items-start justify-center">
+              <div className="flex items-center gap-16">
+                <h1 className="[-webkit-text-stroke:1.5px_#AEC1ED] text-extra text-transparent font-bold font-headings">
+                  3
+                </h1>
+                <div className="flex flex-col gap-20">
+                  <h2 className="text-N200 text-xl font-bold font-headings">
+                    Connect and negotiate
+                  </h2>
+                  <p className="text-md text-N100 font-botyText tracking-md">
+                    Connect with other companies directly through our platform
+                    by sending a custom deal pitch. Negotiate the license terms
+                    until you both reach an agreement in our chat room.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-504 h-408 rounded-16 px-60 shadow-base-24 bg-white mt-88" />
+            <img
+              src="images/landing/Find.png"
+              alt=""
+              className="absolute pt-512 pl-122"
+            />
+            <img
+              src="images/landing/ConnectJazwares.png"
+              alt=""
+              className="absolute pt-1000 right-122"
+            />
           </div>
+          <h1 className="font-medium text-4xl text-transparent bg-clip-text bg-gradient-to-r from-O04 to-O05 pl-104 w-810 pt-148">
+            That's it! Our all-in-one licensing marketplace makes it easy for
+            licensees and licensors to connect and do business in a streamlined
+            and efficient way.
+          </h1>
         </div>
         <h1 className="[-webkit-text-stroke:2px_#ffffff] text-center">
           How it works?

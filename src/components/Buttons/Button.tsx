@@ -86,9 +86,7 @@ const Button = ({
       {iconLeft && (
         <Icon name={iconLeft} viewBox={viewBox} size={iconSize} color={color} />
       )}
-      <h1 className="font-bold font-headings text-sm tracking-[0.02rem]">
-        {title}
-      </h1>
+      <h1 className="font-bold font-headings text-sm tracking-md">{title}</h1>
       {iconRight && (
         <Icon
           name={iconRight}
