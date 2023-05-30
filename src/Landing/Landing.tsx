@@ -11,8 +11,8 @@ function Landing() {
     console.log("-----", openSignup);
   }, [openSignup]);
   return (
-    <>
-      <div className="mx-24 overflow-hidden">
+    <div className="overflow-hidden">
+      <div className="mx-24">
         <div id="hero" className="relative">
           <div id="background" className="z-1 absolute -top-169 w-full">
             <div className="w-1216 h-253 bg-radial-gradiant m-auto" />
@@ -175,7 +175,7 @@ function Landing() {
             </div>
           </div>
         </div>
-        <div id="work" className="relative mt-42 overflow-hidde z-10">
+        <div id="work" className="relative mt-42 z-10">
           <div id="background" className="absolute z-1 w-full">
             <div id="cloud" className="relative">
               <img
@@ -340,7 +340,7 @@ function Landing() {
       </div>
       <div
         id="footer"
-        className="relative bg-N300 py-80 px-308 flex flex-col items-center gap-60 overflow-hidden"
+        className="relative bg-N300 py-80 px-308 flex flex-col items-center gap-60"
       >
         <div id="back" className="absolute w-full z-[2]">
           <div id="cloud" className="relative">
@@ -391,7 +391,7 @@ function Landing() {
           </h1>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
