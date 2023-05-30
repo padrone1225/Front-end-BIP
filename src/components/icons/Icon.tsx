@@ -1,14 +1,18 @@
 import resolveConfig from "tailwindcss/resolveConfig";
-import * as tailwindConfig from "@tailwindConfig";
+import tailwindConfig from "../../../tailwind.config";
 import { IconNames, Icons } from "./icons";
 
-export type IconProperties = {
+interface RecursiveKeyValuePair<T, K> {
+  [key: string]: T | RecursiveKeyValuePair<T, K>;
+}
+
+interface IconProperties {
   className?: string;
   viewBox?: string;
-  color?: string;
+  color?: string | RecursiveKeyValuePair<string, string>;
   size?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl";
   name: IconNames;
-};
+}
 
 const fullConfig = resolveConfig(tailwindConfig);
 
@@ -45,20 +49,26 @@ export default function Icon({
         break;
     }
   };
-
-  if (fullConfig.theme?.colors[color]) {
+  // @ts-ignore
+  if (fullConfig.theme?.colors && fullConfig.theme?.colors[color]) {
+    // @ts-ignore
     color = fullConfig.theme.colors[color];
   }
 
   return (
     <svg
       className={className}
+      // @ts-ignore
       width={getSize()}
+      // @ts-ignore
       height={getSize()}
       viewBox={viewBox || "0 0 24 24"}
       fill="none"
     >
-      {Icons[name](color)}
+      {
+        // @ts-ignore
+        Icons[name](color)
+      }
     </svg>
   );
 }
