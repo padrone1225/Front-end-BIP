@@ -1,12 +1,12 @@
 import Icon from "../icons/Icon";
 import { IconNames } from "../icons/icons";
 
-import * as tailwindConfig from "@tailwindConfig";
+// import * as tailwindConfig from "@tailwindConfig";
 import resolveConfig from "tailwindcss/resolveConfig";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 
-const fullConfig = resolveConfig(tailwindConfig);
+// const fullConfig = resolveConfig(tailwindConfig);
 
 interface ButtonProperties {
   size?: "sm" | "lg";
@@ -82,6 +82,7 @@ const Button = ({
       className={classNames(commonClasses + mainClass + disabled + className)}
       onMouseEnter={hoverEvent}
       onMouseLeave={leaveEvent}
+      onClick={onClick}
     >
       {iconLeft && (
         <Icon name={iconLeft} viewBox={viewBox} size={iconSize} color={color} />

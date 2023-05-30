@@ -1,10 +1,15 @@
 import Button from "../components/Buttons/Button";
 
-import resolveConfig from "tailwindcss/resolveConfig";
-import * as tailwindConfig from "@tailwindConfig";
+// import resolveConfig from "tailwindcss/resolveConfig";
+// import * as tailwindConfig from "@tailwindConfig";
+import { useEffect, useState } from "react";
 
 function Landing() {
-  const fullConfig = resolveConfig(tailwindConfig);
+  const [openSignup, setOpenSignup] = useState<boolean>(false);
+  // const fullConfig = resolveConfig(tailwindConfig);
+  useEffect(() => {
+    console.log("-----", openSignup);
+  }, [openSignup]);
   return (
     <>
       <div className="mx-24 overflow-hidden">
@@ -366,6 +371,7 @@ function Landing() {
           title="Get Start"
           iconLeft="Right"
           className=" z-[3]"
+          onClick={() => setOpenSignup(!openSignup)}
         />
       </div>
       <div
