@@ -31,8 +31,8 @@ const Button = ({
   const [color, setColor] = useState<string>("white");
   const [disabled, setDisabled] = useState<string>("");
 
-  const commonClasses = `rounded-full inline-flex items-center justify-center gap-8 border-1.5 ${
-    size === "lg" ? "px-24 py-12" : "px-16 py-8"
+  const commonClasses = `rounded-full inline-flex items-center justify-center md:gap-8 xs:gap-5 border-1.5 ${
+    size === "lg" ? "md:px-24 xs:px-20 py-12" : "px-16 py-8"
   }`;
   const primaryClasses = ` bg-gradient-to-b from-100% to-0% text-white ${
     disable
@@ -71,6 +71,8 @@ const Button = ({
       }
     }
   };
+
+  viewBox = viewBox || "0 0 24 24";
 
   return (
     <button

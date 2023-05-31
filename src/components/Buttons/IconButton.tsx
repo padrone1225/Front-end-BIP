@@ -7,12 +7,14 @@ interface IconButtonProperties {
   size: "sm" | "md" | "lg";
   name?: IconNames;
   className?: string;
+  onClick?: () => void;
 }
 
 const IconButton = ({
   size,
   name = "NotificationOn",
   className,
+  onClick,
 }: IconButtonProperties) => {
   const [color, setColor] = useState<string>("N500");
   const commonClasses =
@@ -39,6 +41,7 @@ const IconButton = ({
       className={classNames(commonClasses + styleClasses + className)}
       onMouseEnter={hoverEvent}
       onMouseLeave={leaveEvent}
+      onClick={onClick}
     >
       <Icon name={name} size={iconSize} viewBox={viewBox} color={color} />
     </button>

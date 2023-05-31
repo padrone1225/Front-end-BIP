@@ -1,33 +1,38 @@
+import classNames from "classnames";
 import Button from "../Buttons/Button";
 import IconButton from "../Buttons/IconButton";
 import { InputField } from "../Field/InputField";
 import Icon from "../icons/Icon";
 
 interface ModalComponentProperties {
-  title?: string;
+  title: string;
   closeModal?: () => void;
+  children: React.ReactNode;
+  className?: string;
 }
 
 export const ModalComponent = ({
   title,
   closeModal,
+  children,
+  className,
 }: ModalComponentProperties) => {
   return (
-    <div className="flex flex-col xs:w-319 md:w-536 w-607 m-auto mt-10 rounded-2xl shadow-drop-45">
+    <div
+      className={classNames(
+        className +
+          " flex flex-col xs:w-319 md:w-536 w-607 m-auto mt-10 rounded-2xl shadow-drop-45 bg-white"
+      )}
+    >
       <div
         id="modal-header"
         className="rounded-t-2xl flex items-center justify-between w-full p-24 border-b border-b-N50"
       >
-        <h1 className="text-N500 text-3xl font-bold font-headings">
-          Modal Title
-        </h1>
-        <IconButton name="Close" size="lg" />
+        <h1 className="text-N500 text-3xl font-bold font-headings">{title}</h1>
+        <IconButton name="Close" size="lg" onClick={closeModal} />
       </div>
       <div id="modal-body" className="py-40 px-24 flex flex-col gap-40">
-        AA
-        {/* <div className="flex flex-col gap-24">
-          <InputField iconLeft="Mail" label="Enter your email" full />
-        </div> */}
+        {children}
       </div>
       <div
         id="modal-footer"
