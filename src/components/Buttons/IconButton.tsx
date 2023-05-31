@@ -5,7 +5,7 @@ import { IconNames } from "../icons/icons";
 
 interface IconButtonProperties {
   size: "sm" | "md" | "lg";
-  name: IconNames;
+  name?: IconNames;
   className?: string;
 }
 
