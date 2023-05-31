@@ -12,7 +12,7 @@ interface ButtonProperties {
   iconSize?: "sm" | "lg" | "2xs" | "xs" | "md" | "xl";
   viewBox?: string;
   disable?: boolean;
-  title?: string;
+  title: string;
   onClick?: () => void;
 }
 

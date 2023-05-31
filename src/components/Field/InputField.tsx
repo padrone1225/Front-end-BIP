@@ -11,6 +11,7 @@ interface InputFieldProperties {
   iconLeft?: IconNames;
   iconRight?: IconNames;
   disabled?: boolean;
+  full?: boolean;
 }
 
 export const InputField = ({
@@ -18,6 +19,7 @@ export const InputField = ({
   iconLeft,
   iconRight,
   disabled,
+  full,
   ...inputProps
 }: InputFieldProperties) => {
   const [mouseOver, setMouseOver] = useState<boolean>(false);
@@ -29,7 +31,7 @@ export const InputField = ({
     : fullConfig.theme?.colors?.N100;
 
   const commonClasses =
-    "peer border border-N100 rounded-2xl shadow-base-25 py-12 font-bodyText text-sm hover:border-N500 focus:border-P300 focus:outline-none focus:placeholder:opacity-0 w-full transition-all duration-200 ease-linear  motion-reduce:transition-none [&:not([input-placeholder-active])]:placeholder:opacity-0" +
+    "peer border border-N100 rounded-xl shadow-base-25 py-12 font-bodyText text-sm hover:border-N500 focus:border-P300 focus:outline-none focus:placeholder:opacity-0 w-full transition-all duration-200 ease-linear  motion-reduce:transition-none [&:not([input-placeholder-active])]:placeholder:opacity-0 shadow-base-25" +
     (iconLeft ? " pl-40" : " pl-16") +
     (iconRight ? " pr-40" : " pl-16") +
     (disabled && " border-N75 bg-N25");
@@ -52,7 +54,7 @@ export const InputField = ({
 
   return (
     <div
-      className="max-w-[20.75rem] relative mt-20"
+      className={`${full ? "w-full" : "max-w-[20.75rem]"} relative mt-20`}
       onMouseEnter={() => {
         if (!focus) setMouseOver(true);
       }}
@@ -72,7 +74,6 @@ export const InputField = ({
         <Icon
           name={iconLeft}
           size="sm"
-          viewBox="0 0 16 16"
           color={iconColor}
           className="absolute ml-16 top-1/2 -translate-y-1/2"
         />
@@ -81,7 +82,6 @@ export const InputField = ({
         <Icon
           name={iconRight}
           size="sm"
-          viewBox="0 0 16 16"
           color={iconColor}
           className="absolute mr-16 top-1/2 right-0 -translate-y-1/2"
         />
