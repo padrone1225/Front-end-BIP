@@ -23,8 +23,9 @@ const IconButton = ({
       : size === "md"
       ? " p-4"
       : " p-8";
-  const iconSize = size === "sm" ? "xs" : "md";
-  const viewBox = size === "sm" ? "0 0 12 12" : "0 0 24 24";
+  const iconSize = size === "sm" ? "xs" : size;
+  // const viewBox = size === "sm" ? "0 0 12 12" : "0 0 24 24";
+  const viewBox = "0 0 24 24";
 
   const hoverEvent = () => {
     setColor("P400");
