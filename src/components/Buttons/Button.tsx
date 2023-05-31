@@ -1,12 +1,7 @@
 import Icon from "../icons/Icon";
 import { IconNames } from "../icons/icons";
-
-// import * as tailwindConfig from "@tailwindConfig";
-import resolveConfig from "tailwindcss/resolveConfig";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
-
-// const fullConfig = resolveConfig(tailwindConfig);
 
 interface ButtonProperties {
   size?: "sm" | "lg";

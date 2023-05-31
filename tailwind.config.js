@@ -16,6 +16,7 @@ export default {
     extend: {
       colors: {
         // Neutrals
+        N25: "#F4F4F4",
         N50: "#E9E9E9",
         N75: "#999DA2",
         N100: "#6E747C",
@@ -108,6 +109,7 @@ export default {
         10: "0.625rem",
         11: "0.6875rem",
         12: "0.75rem",
+        13: "0.8125rem",
         14: "0.875rem",
         16: "1rem",
         20: "1.25rem",
@@ -233,11 +235,8 @@ export default {
         "drop-30": "0 4px 24px rgba(192,195,210,0.3)",
         "drop-45": "0 4px 24px rgba(192,195,210,0.45)",
         "base-24": "0 24px 56px rgba(174, 193, 237, 0.24)",
+        "base-25": "0 4px 16px rgba(192, 195, 210, 0.25)",
         "base-30": "0 8px 32px rgba(192, 195, 210, 0.3)",
-      },
-      borderRadius: {
-        12: "0.75rem",
-        16: "1rem",
       },
     },
   },
