@@ -12,6 +12,7 @@ interface InputFieldProperties {
   iconRight?: IconNames;
   disabled?: boolean;
   full?: boolean;
+  error?: boolean;
 }
 
 export const InputField = ({
@@ -20,6 +21,7 @@ export const InputField = ({
   iconRight,
   disabled,
   full,
+  error = false,
   ...inputProps
 }: InputFieldProperties) => {
   const [mouseOver, setMouseOver] = useState<boolean>(false);
@@ -31,7 +33,8 @@ export const InputField = ({
     : fullConfig.theme?.colors?.N100;
 
   const commonClasses =
-    "peer border border-N100 rounded-xl shadow-base-25 py-12 font-bodyText text-sm hover:border-N500 focus:border-P300 focus:outline-none focus:placeholder:opacity-0 w-full transition-all duration-200 ease-linear  motion-reduce:transition-none [&:not([input-placeholder-active])]:placeholder:opacity-0 shadow-base-25" +
+    "peer border rounded-xl shadow-base-25 py-12 font-bodyText text-sm border-N100 focus:outline-none focus:placeholder:opacity-0 w-full transition-all duration-200 ease-linear motion-reduce:transition-none [&:not([input-placeholder-active])]:placeholder:opacity-0 shadow-base-25" +
+    (error ? " border-A300" : " hover:border-N500 focus:border-P300") +
     (iconLeft ? " pl-40" : " pl-16") +
     (iconRight ? " pr-40" : " pl-16") +
     (disabled && " border-N75 bg-N25");
@@ -53,38 +56,45 @@ export const InputField = ({
   };
 
   return (
-    <div
-      className={`${full ? "w-full" : "max-w-[20.75rem]"} relative mt-20`}
-      onMouseEnter={() => {
-        if (!focus) setMouseOver(true);
-      }}
-      onMouseLeave={() => {
-        if (!focus) setMouseOver(false);
-      }}
-      ref={inputRef}
-    >
-      <input
-        type="text"
-        className={commonClasses}
-        placeholder={label}
-        onFocus={() => setFocus(true)}
-      />
-      {label && <label className={labelClasses}>{label}</label>}
-      {iconLeft && (
-        <Icon
-          name={iconLeft}
-          size="sm"
-          color={iconColor}
-          className="absolute ml-16 top-1/2 -translate-y-1/2"
+    <div>
+      <div
+        className={`${full ? "w-full" : "max-w-[20.75rem]"} relative mt-20`}
+        onMouseEnter={() => {
+          if (!focus) setMouseOver(true);
+        }}
+        onMouseLeave={() => {
+          if (!focus) setMouseOver(false);
+        }}
+        ref={inputRef}
+      >
+        <input
+          type="text"
+          className={commonClasses}
+          placeholder={label}
+          onFocus={() => setFocus(true)}
         />
-      )}
-      {iconRight && (
-        <Icon
-          name={iconRight}
-          size="sm"
-          color={iconColor}
-          className="absolute mr-16 top-1/2 right-0 -translate-y-1/2"
-        />
+        {label && <label className={labelClasses}>{label}</label>}
+        {iconLeft && (
+          <Icon
+            name={iconLeft}
+            size="sm"
+            color={iconColor}
+            className="absolute ml-16 top-1/2 -translate-y-1/2"
+          />
+        )}
+        {iconRight && (
+          <Icon
+            name={iconRight}
+            size="sm"
+            color={iconColor}
+            className="absolute mr-16 top-1/2 right-0 -translate-y-1/2"
+          />
+        )}
+      </div>
+      {error && (
+        <p className="mt-2 text-sm text-red-600 dark:text-red-500">
+          <span className="font-medium">Oh, snapp!</span> Some error message.
+        </p>
       )}
     </div>
   );
