@@ -6,13 +6,13 @@ interface RecursiveKeyValuePair<T, K> {
   [key: string]: T | RecursiveKeyValuePair<T, K>;
 }
 
-interface IconProperties {
+export type IconProperties = {
   className?: string;
   viewBox?: string;
   color?: string | RecursiveKeyValuePair<string, string>;
   size?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl";
   name: IconNames;
-}
+};
 
 const fullConfig = resolveConfig(tailwindConfig);
 
