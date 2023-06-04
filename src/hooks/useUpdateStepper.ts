@@ -1,16 +1,10 @@
 import { StepperItemProperties } from "../Onboarding/stepper";
 
-interface useUpdateStepperProperties {
-  items: Array<StepperItemProperties>;
-  activeStepNumber: number;
-  itemSubtitles: { [x: string]: string };
-}
-
-export const useUpdateStepper = ({
-  items,
-  activeStepNumber,
-  itemSubtitles,
-}: useUpdateStepperProperties) => {
+export const useUpdateStepper = (
+  items: Array<StepperItemProperties>,
+  activeStepNumber: number,
+  itemSubtitles: { [x: string]: string }
+) => {
   items[activeStepNumber] = {
     ...items[activeStepNumber],
     disabled: false,
