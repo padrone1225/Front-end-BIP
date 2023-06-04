@@ -45,7 +45,14 @@ export const Checkbox = ({
           )}
         </div>
       </label>
-      {label && <label className="text-lg">{label}</label>}
+      {label && (
+        <label className="text-sm flex gap-1">
+          <span className="text-N500">{label}</span>
+          {link && (
+            <div className="text-P300 underline cursor-pointer">{link}</div>
+          )}
+        </label>
+      )}
     </div>
   );
 };
